@@ -11,13 +11,19 @@ body {
 }
 
 nav { 
-  background: #000; 
-  padding: 15px; 
+  background: linear-gradient(to bottom, #000000eb, #2a2a2a00); 
+  padding: 0 25px; 
   display: flex; 
   justify-content: space-between; 
   position: sticky; 
   top: 0; 
-  z-index: 100;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: 300ms;
+  -o-transition: 300ms;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
 }
 
 nav a { 
@@ -32,3 +38,4 @@ nav a {
 .card { background: #333; padding: 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: 0.3s; }
 .card:hover { border: 1px solid var(--accent); transform: scale(1.05); }
 .card img { width: 100%; border-radius: 5px; }
+
