@@ -13,7 +13,7 @@ body {
 /* Layout Utama Navbar */
 nav { 
   background: linear-gradient(to bottom, #000000eb, #2a2a2a00); 
-  padding: 10px 25px; 
+  padding: 8px 17px; 
   display: flex; 
   align-items: center; /* Menjaga logo & menu sejajar vertikal di tengah */
   justify-content: flex-start; /* Mengikuti gaya gambar yang rapat ke kiri */
@@ -25,7 +25,7 @@ nav {
 
 /* Ukuran Logo agar tidak kekecilan */
 .nav-logo {
-  height: 40px; /* Sesuaikan angka ini sampai pas dengan mata kamu */
+  height: 72px; /* Sesuaikan angka ini sampai pas dengan mata kamu */
   display: block;
 }
 
@@ -75,5 +75,6 @@ nav {
 .card { background: #333; padding: 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: 0.3s; }
 .card:hover { border: 1px solid var(--accent); transform: scale(1.05); }
 .card img { width: 100%; border-radius: 5px; }
+
 
 
