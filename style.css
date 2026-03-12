@@ -71,11 +71,72 @@ nav {
   text-decoration: none;
 }
 
+/* --- Tampilan Desktop (Default) --- */
+.bottom-nav {
+    display: none; /* Sembunyikan menu bawah di komputer */
+}
+
+/* --- Tampilan Mobile (Portrait) --- */
+@media screen and (max-width: 768px) {
+    /* 1. Sembunyikan Menu Navigasi Atas & Tombol Download */
+    .desktop-only {
+        display: none !important;
+    }
+
+    /* 2. Atur Navbar Atas agar hanya ada Logo di tengah/kiri */
+    nav {
+        justify-content: center; /* Logo di tengah untuk kesan rapi di HP */
+        height: 50px;
+    }
+
+    /* 3. Tampilkan & Atur Bottom Nav Bar */
+    .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 65px;
+        background: #121212; /* Warna gelap solid agar teks terbaca */
+        border-top: 1px solid #333;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+        padding-bottom: env(safe-area-inset-bottom); /* Support layar poni/curved HP baru */
+    }
+
+    .nav-item {
+        color: #888;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 11px;
+        transition: 0.3s;
+    }
+
+    .nav-item.active {
+        color: #fff; /* Warna putih untuk menu yang sedang dibuka */
+    }
+
+    /* Styling Icon (Gunakan font-awesome atau icon pack favoritmu) */
+    .nav-item i {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    /* Berikan margin bawah pada body agar konten tidak tertutup Bottom Nav */
+    body {
+        margin-bottom: 70px;
+    }
+}
+
 .container { padding: 20px; max-width: 1200px; margin: auto; }
 .grid-tv { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
 .card { background: #333; padding: 10px; border-radius: 8px; text-align: center; cursor: pointer; transition: 0.3s; }
 .card:hover { border: 1px solid var(--accent); transform: scale(1.05); }
 .card img { width: 100%; border-radius: 5px; }
+
 
 
 
